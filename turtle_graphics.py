@@ -1,3 +1,9 @@
+"""
+Turtle Graphics - Lines and Radial Patterns
+Author: Alexandr Iapara
+Description: Utility functions to draw straight lines, radial spokes, and quadrant-based radial patterns using the turtle graphics module.
+"""
+
 # Import Turtle graphics module 
 import turtle
 t = turtle.Turtle()
@@ -75,14 +81,31 @@ def draw_rad_in_quad(t, length, num_lines):
     Returns:
         None
     """
+    
     x = 2 * length
     y = 2 * length
     draw_rad_lines(t, x, y, length, num_lines)
     draw_rad_lines(t, -x, y, length, num_lines)
     draw_rad_lines(t, -x, -y, length, num_lines)
     draw_rad_lines(t, x, -y, length, num_lines)
+    
+def main():
+    """
+    Main function to execute the drawing commands.
 
-#draw_rad_in_quad(t, 50, 9)
-#draw_rad_in_quad(t, 30, 6)
-#draw_rad_in_quad(t, 80, 12)
+    This function initializes the turtle graphics window, sets the speed of the turtle,
+    and calls the draw_rad_in_quad function to draw radial lines in each quadrant.
+    It then waits for a user click to close the turtle graphics window.
+
+    Returns:
+        None
+    """
+    # Sets the turtle speed to maximum
+    #t.speed(0)  
+
+    draw_rad_in_quad(t, 50, 9)
+    turtle.done()
+
+if __name__ == "__main__":
+    main() 
 
