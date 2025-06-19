@@ -24,6 +24,7 @@ def draw_grid(integer):
     print("\n")
 
 def main():
+    print("\033[93mWelcome to the Number Grid Program!\nThis program will create a grid of numbers based on your input.\033[0m")
     while True:
         try:
             input_value = int(input("\nEnter a number for the grid size (positive integer): "))
