@@ -64,4 +64,10 @@ def draw_concentric_circles(t, circles, radius, gap, x, y):
       draw_circle(t, radius, x, y)
       radius = radius + gap
 
-draw_concentric_circles(t, 3, 50, 25, 0, 0)
+def main():
+    #turtle.speed(0) 
+    draw_concentric_circles(t, 3, 50, 25, 0, 0)
+    turtle.done()
+
+if __name__ == "__main__":
+      main()
