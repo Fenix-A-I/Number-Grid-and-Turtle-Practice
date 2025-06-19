@@ -24,7 +24,24 @@ def draw_grid(integer):
     print("\n")
 
 def main():
-    draw_grid(5)
+    while True:
+        try:
+            input_value = int(input("\nEnter a number for the grid size (positive integer): "))
+            if input_value <= 0:
+                print("\033[91mPlease enter a positive integer.\033[0m")
+                continue
+            break
+
+        except ValueError:
+            print("\033[91mInvalid input. Please enter a valid positive integer.\033[0m")
+        except KeyboardInterrupt:
+            print("\n\033[93mProgram terminated by user.\033[0m\n")
+            return
+        except Exception as e:
+            print(f"\033[91mAn unexpected error occurred: {e}\033[0m\n")
+            return
+        
+    draw_grid(input_value)
 
 if __name__ == "__main__":
     main()
