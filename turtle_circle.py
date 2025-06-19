@@ -6,7 +6,6 @@ Description: Utility functions to draw concentric circles using the turtle graph
 
 # Import Turtle graphics module
 import turtle
-t = turtle.Turtle()
 
 def move(t, x, y):
    """
@@ -65,6 +64,7 @@ def draw_concentric_circles(t, circles, radius, gap, x, y):
       radius = radius + gap
 
 def main():
+    t = turtle.Turtle()
     #turtle.speed(0) 
     draw_concentric_circles(t, 3, 50, 25, 0, 0)
     turtle.done()
