@@ -12,14 +12,5 @@ Alexandr Iapara
 ## Requiremenets
 Python needs to be installed to run the following program.
 
-## Usage
-```
-python cement_calc.py
-```
-or 
-```
-python3 cement_calc.py
-```
-
 ## Programming Languages
 Python
